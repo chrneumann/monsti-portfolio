@@ -1,0 +1,8 @@
+<article class="{{if .Embedded}}embedded{{end}}">
+  {{if not .Embedded}}
+  <h1>{{(index .Node.Fields "core.Title").RenderHTML}}</h1>
+  {{end}}
+  <div>
+    {{.PortfolioList}}
+  </div>
+</article>

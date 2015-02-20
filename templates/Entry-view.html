@@ -1,0 +1,10 @@
+<article class="{{if .Embedded}}embedded{{end}} node-type-events-Event">
+  <header>
+    {{if not .Embedded}}
+    <h1>{{(index .Node.Fields "core.Title").RenderHTML}}</h1>
+    {{end}}
+  </header>
+  <div>
+    {{(index .Node.Fields "core.Body").RenderHTML}}<br>
+  </div>
+</article>

@@ -1,0 +1,9 @@
+<ul class="monsti-portfolio--list">
+  {{range .Entries}}
+  <li>
+    <a href="{{.Path}}">
+      <img src="{{pathJoin .Path ((index .Node.Fields "core.Thumbnail").Value)}}?size=thumbnail">
+      {{(index .Node.Fields "core.Title").RenderHTML}}</a>
+  </li>
+  {{end}}
+</ul>
